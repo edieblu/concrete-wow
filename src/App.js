@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function App() {
+  const _onClick = () => {
+    alert("Hey it works a little bit 🎉");
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className=""></header>
+      <div className="wrap">
+        <h1>Concrete-Wow lives!</h1>
+        <div className="search">
+          <input
+            type="text"
+            className="search-term"
+            placeholder="Type a website url"
+          ></input>
+          <button type="submit" className="search-button" onClick={_onClick}>
+            Search
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
