@@ -2,24 +2,38 @@ import React, { useState, useCallback } from "react";
 import Answer from './Answer';
 import axios from 'axios';
 
+
 export default function Search() {
   const BASE_URL = "https://api.factually.dev/reputation?"
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(false)
   const [data, setData] = useState(null);
   const [isError, setIsError] = useState(false)
+  const [isValidUrl, setIsValidUrl] = useState(true)
+
+  const validUrlRegex = new RegExp('(^http[s]?:\/{2})|(^www)|(^\/{1,2})')
+
+
   const _sendSerchRequest = useCallback(async () => {
     const url = `${BASE_URL}url=${searchTerm}`
-    setIsLoading(true)
-    try {
-      const result = await axios(url);
-      setData(result.data);
-      setSearchTerm("");
-    } catch (error) {
-      setIsError(true);
+    if (validUrlRegex.test(searchTerm)) {
+      setIsValidUrl(true)
+      setIsLoading(true)
+      setData(null)
+      setIsError(false)
+      try {
+        const result = await axios(url);
+        setData(result.data);
+        setSearchTerm("");
+      } catch (error) {
+        setIsError(true);
+        setData(null)
+      }
+      setIsLoading(false)
     }
-    setIsLoading(false)
-  }, [searchTerm, isLoading, data]);
+    else setIsValidUrl(false)
+
+  }, [searchTerm, isLoading, isError, data]);
 
   const _checkKeyActions = useCallback((event) => {
     if (event.key === "Escape") {
@@ -45,7 +59,7 @@ export default function Search() {
         value={searchTerm}
         onChange={_updateSearchTerm}
         onKeyDown={_checkKeyActions}
-        placeholder="Paste a link here"
+        placeholder="https://"
         autoFocus
       />
       {isLoading ? <div className='loading'>
@@ -62,6 +76,7 @@ export default function Search() {
     </div>
     <div>
     {isError ? <p>Hmm 🤔. Something went wrong, please try again.</p> : null}
+    {!isValidUrl ? <p>Hmm 🤔. That doesn't look like a valid website URL. <br/>Make sure it start with 'www' or 'https'. Please try again.</p> : null}
     {data !== null ? <Answer website={data.basisURL} isTrusted={data.safe} score={data.distance} /> : null}
     </div>
     </div>
