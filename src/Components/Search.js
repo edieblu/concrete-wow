@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 
 export default function Search() {
+  const BASE_URL = "https://api.factually.dev"
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(false)
   const _sendSerchRequest = useCallback(() => {
