@@ -1,9 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open + Sans);
 
 :root {
   --main-bg-color: #1a1e24;
   --main-fg-color: #f6f6f6;
-  --accet-color-blue: #2BB0ED;
+  --accet-color-blue: #2bb0ed;
 }
 
 *,
@@ -20,45 +20,44 @@ html {
   overscroll-behavior-y: none;
 }
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: 'Open Sans', Helvetica;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    -webkit-font-smoothing: antialiased;
-  }
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  -webkit-font-smoothing: antialiased;
+}
 
 .body {
   background-color: var(--main-bg-color);
   color: var(--main-fg-color);
 }
 
-  h1 {
-    font-size: 8rem;
-  }
+h1 {
+  font-size: 8rem;
+}
 
-  h2 {
-    font-size: 2.4rem;
-    text-transform: capitalize;
-    letter-spacing: 0.5px;
-  }
+h2 {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
 
-  h3 {
-    font-size: 2rem;
-    text-transform: capitalize;
-
-  }
+h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
 
 p {
   font-size: 1.8rem;
   line-height: 1.5;
 }
 
-header{
+header {
   padding: 10rem 4rem;
   max-width: 100%;
   position: relative;
@@ -93,7 +92,7 @@ header{
   font-size: 1.5rem;
 }
 
-.search-term:focus{
+.search-term:focus {
   color: var(--main-bg-color);
 }
 
@@ -103,7 +102,6 @@ header{
   height: 3.8rem;
   width: 3.8rem;
   text-align: center;
-  font-size: 1.5rem;
   border: 1px solid var(--accet-color-blue);
   border-radius: 0 5px 5px 0;
   cursor: pointer;
@@ -133,12 +131,23 @@ header{
 }
 
 @-webkit-keyframes spinning {
-	from { -webkit-transform: rotate(0deg); }
-	to { -webkit-transform: rotate(359deg); }
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+  }
 }
+
 @keyframes spinning {
-	from { transform: rotate(0deg); }
-	to { transform: rotate(359deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 .white-bg {
@@ -179,7 +188,7 @@ header{
 
 .more-info p {
   line-height: 1.25;
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .third-section {
@@ -196,9 +205,10 @@ header{
   align-items: center;
   justify-content: center;
 }
+
 .footer-concatiner i {
   font-size: 4.8rem;
-  color: Dodgerblue;
+  color: dodgerblue;
 }
 
 a:visited {
