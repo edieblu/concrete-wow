@@ -17,6 +17,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "resolutions": {
+    "is-promise": "2.1.0",
+    "run-async/is-promise": "2.1.0"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },

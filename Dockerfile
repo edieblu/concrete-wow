@@ -1,6 +1,6 @@
 # Dockerfile to build a production container which listens on port 80
 
-FROM node:alpine
+FROM node:12-alpine
 
 EXPOSE $PORT
 
