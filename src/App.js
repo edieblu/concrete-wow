@@ -1,13 +1,11 @@
 import React from "react";
-
+import Search from "./Components/Search"
 import Logo from "./Components/Logo/Logo";
 import Footer from "./Components/Footer/Footer";
 import "./App.css";
 
 function App() {
-  const _onClick = () => {
-    alert("Hey it works a little bit 🎉");
-  };
+
   return (
     <>
       <div className="body">
@@ -18,16 +16,7 @@ function App() {
             <h3>Spot bad information. Fight COVID-19. Stay safe.</h3>
             <h3>Want to know if you can trust a website?</h3>
           </div>
-          <div className="search">
-            <input
-              type="text"
-              className="search-term"
-              placeholder="Paste a link here"
-            ></input>
-            <button type="submit" className="search-button" onClick={_onClick}>
-              <i className="fa fa-search"></i>
-            </button>
-          </div>
+          <Search />
         </header>
 
         <div className="white-bg">
@@ -51,7 +40,9 @@ function App() {
                 <i className="fa fa-thumbs-down"></i> Thumbs down. Stay away
                 from this site.
               </p>
-              <p><strong>Simple!</strong></p>
+              <p>
+                <strong>Simple!</strong>
+              </p>
             </div>
             <img
               src="/icons-images/Screenshot.jpg"

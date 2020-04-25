@@ -101,6 +101,7 @@ header{
   color: var(--main-fg-color);
   background: var(--accet-color-blue);
   height: 3.8rem;
+  width: 3.8rem;
   text-align: center;
   font-size: 1.5rem;
   border: 1px solid #2BB0ED;
