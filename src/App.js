@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="body">
       <header className="">
-        <h1 className="title">Concrete-Wow</h1>
+        <h1 className="title">Factually</h1>
         <div className="tagline">
           <p>This is where we explain what this website does.</p>
           <p>Maybe even in two lines.</p>
