@@ -6,10 +6,13 @@ function App() {
     alert("Hey it works a little bit 🎉");
   };
   return (
-    <div className="App">
-      <header className=""></header>
-      <div className="wrap">
-        <h1>Concrete-Wow lives!</h1>
+    <div className="body">
+      <header className="">
+        <h1 className="title">Concrete-Wow</h1>
+        <div className="tagline">
+          <p>This is where we explain what this website does.</p>
+          <p>Maybe even in two lines.</p>
+        </div>
         <div className="search">
           <input
             type="text"
@@ -17,9 +20,13 @@ function App() {
             placeholder="Type a website url"
           ></input>
           <button type="submit" className="search-button" onClick={_onClick}>
-            Search
+          <i className="fa fa-search"></i>
           </button>
         </div>
+      </header>
+
+      <div>
+
       </div>
     </div>
   );

@@ -1,41 +1,78 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-.wrap{
-  max-width: 600px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+:root {
+  --main-bg-color: #1a1e24;
+  --main-fg-color: #f6f6f6;
+  --accet-color-blue: #2BB0ED;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+.body {
+  background-color: var(--main-bg-color);
+  color: var(--main-fg-color);
+  line-height: 1.5;
+}
+
+header{
+  padding: 10rem 4rem;
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 8rem;
+}
+
+.tagline {
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 3rem;
 }
 
 .search {
-  max-width: 300px;
-  position: relative;
-  display: flex;
+  height: 2.5rem;
 }
 
 .search-term {
-  width: 200px;
-  border: 3px solid #4098D7;
+  width: 300px;
+  height: 100%;
+  border: 3px solid #2BB0ED;
   border-right: none;
   padding: 5px;
-  height: 20px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: #9DBFAF;
+  font-size: 1.5rem;
 }
 
 .search-term:focus{
-  color: #4098D7;
+  color: var(--main-bg-color);
 }
 
 .search-button {
-  height: 36px;
-  border: 1px solid #4098D7;
-  background: #4098D7;
+  color: var(--main-fg-color);
+  background: var(--accet-color-blue);
+  height: 3.8rem;
   text-align: center;
-  color: #fff;
+  font-size: 1.5rem;
+  border: 1px solid #2BB0ED;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.75rem;
+  padding-bottom: 1px;
 }
