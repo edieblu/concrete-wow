@@ -1,10 +1,9 @@
 import React from 'react';
-import styles from './footer.module.css';
 import '../../App.css';
 
 function Footer() {
   return (
-    <div className={styles.footer_container}>
+    <div className="footer-container">
       <p>
         This platform was built as part of the pan-European Hackathon{' '}
         <a href="https://euvsvirus.org/" target="_blank" rel="noopener noreferrer">

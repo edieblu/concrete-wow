@@ -3,4 +3,5 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #102A43;
   background: #f2f2f2;
+  overscroll-behavior-y: none;
 }

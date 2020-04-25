@@ -11,23 +11,52 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  border: 0;
+  outline: 0;
+}
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overscroll-behavior-y: none;
+}
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Open Sans', Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    -webkit-font-smoothing: antialiased;
+  }
 
 .body {
   background-color: var(--main-bg-color);
   color: var(--main-fg-color);
-  line-height: 1.5;
 }
 
-h2 {
-  font-size: 2.2rem;
-}
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+  }
+
+  h3 {
+    font-size: 2rem;
+    text-transform: capitalize;
+
+  }
 
 p {
   font-size: 1.7rem;
+  line-height: 1.5;
 }
 
 header{
@@ -42,19 +71,15 @@ header{
   text-align: center;
 }
 
-.title {
-  font-size: 8rem;
-}
-
-.tagline {
-  font-weight: 400;
-  font-size: 3rem;
-  line-height: 1.1;
+.tagline p {
+  font-size: 2.8rem;
+  line-height: 1;
   margin-bottom: 3rem;
 }
 
 .search {
   height: 2.5rem;
+  margin: 5rem 0;
 }
 
 .search-term {
@@ -95,10 +120,62 @@ header{
   margin: 0 auto;
   display: flex;
   padding: 10rem;
+  max-width: 800px;
+}
+
+.more-info i {
+  font-size: 3rem;;
+}
+
+.more-info .important {
+  letter-spacing: 0.3px;
+}
+
+.fa-thumbs-up {
+  color: green;
+}
+
+.fa-thumbs-down {
+  color: red;
 }
 
 .more-info img {
   width: 400px;
+  height: 100%;
   filter: opacity(0.5);
   border-radius: 3px;
+}
+
+.more-info p {
+  line-height: 1.25;
+    margin-bottom: 2rem;
+}
+
+.third-section {
+  flex-direction: column;
+  justify-content: center;
+  height: 20rem;
+  max-width: 700px;
+}
+
+.footer-container {
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-concatiner i {
+  font-size: 4.8rem;
+  color: Dodgerblue;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover,
+a:active {
+  color: var(--accet-color-blue);
+  text-decoration: underline;
 }
