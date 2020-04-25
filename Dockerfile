@@ -1,7 +1,8 @@
 # Dockerfile to build a production container which listens on port 80
 
 FROM node:alpine
-EXPOSE 80
+
+EXPOSE $PORT
 
 WORKDIR /usr/src/app
 
@@ -13,4 +14,4 @@ RUN yarn build
 # TODO: use a proper webserver!
 RUN yarn global add serve
 
-CMD [ "serve", "-s", "build", "-l", "80" ]
+CMD [ "sh", "-c", "serve -s -l $PORT build" ]
