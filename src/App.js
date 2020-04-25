@@ -1,13 +1,16 @@
 import React from "react";
 
-import Logo from "./Components/Logo/Logo";
-import "./App.css";
+import Logo from './Components/Logo/Logo';
+import Footer from './Components/Footer/Footer';
+import './App.css';
+
 
 function App() {
   const _onClick = () => {
     alert("Hey it works a little bit 🎉");
   };
   return (
+    <>
     <div className="body">
       <Logo />
       <header className="">
@@ -66,6 +69,9 @@ function App() {
         </p>
       </div>
     </div>
+    <Footer />
+    </>
+
   );
 }
 
