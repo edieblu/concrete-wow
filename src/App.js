@@ -45,7 +45,7 @@ function App() {
                 <strong>Simple!</strong>
               </p>
             </div>
-            <div style={{ position: 'relative' }}>
+            <div className="screenshot-wrapper">
               <img
                 className="screenshot"
                 src="/icons-images/Screenshot.jpg"
