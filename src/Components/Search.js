@@ -2,9 +2,11 @@ import React, { useState, useCallback } from "react";
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [isLoading, setIsLoading] = useState(false)
   const _sendSerchRequest = useCallback(() => {
     alert(`You are searching for: ${searchTerm}`);
     setSearchTerm("");
+    setIsLoading(true)
   }, [searchTerm]);
 
   const _checkKeyActions = useCallback((event) => {
@@ -33,13 +35,17 @@ export default function Search() {
         placeholder="Paste a link here"
         autoFocus
       />
+      {isLoading ? <div className='loading'>
+      <div className='spinner'></div>
+      </div>
+      :
       <button
         type="submit"
         className="search-button"
         onClick={_sendSerchRequest}
       >
         <i className="fa fa-search"></i>
-      </button>
+      </button>}
     </div>
   );
 }
