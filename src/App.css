@@ -37,6 +37,11 @@ h4 {
   color: var(--main-fg-color);
 }
 
+.logo {
+  height: 3rem;
+  padding: 0.5rem;
+}
+
 h1 {
   font-size: 8rem;
 }

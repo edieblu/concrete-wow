@@ -2,7 +2,9 @@ import React from 'react';
 
 function Logo() {
   return (
-    <img className="" style={{ margin: '1rem' }} src="/icons-images/dummy-logo.png" alt="logo" />
+    <a href='https://github.com/concrete-wow/concrete-wow'>
+      <img className="logo" style={{ margin: '1rem' }} src="/icons-images/dummy-logo.png" alt="logo" />
+    </a>
   );
 }
 
