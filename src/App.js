@@ -1,3 +1,4 @@
+
 import React from "react";
 import Search from "./Components/Search"
 import Logo from "./Components/Logo/Logo";
@@ -5,7 +6,6 @@ import Footer from "./Components/Footer/Footer";
 import "./App.css";
 
 function App() {
-
   return (
     <>
       <div className="body">
@@ -18,50 +18,40 @@ function App() {
           </div>
           <Search />
         </header>
-
         <div className="white-bg">
           <div className="more-info">
             <div>
               <h2>No fuss and no frills</h2>
-              <p>
-                We simply tell you if you can trust COVID-19 information on a
-                website or not.
-              </p>
+              <p>We simply tell you if you can trust COVID-19 information on a website or not.</p>
               <p className="important">
                 Solid information and credible sources?
                 <br />
-                <i className="fa fa-thumbs-up"></i> Thumbs up. You can trust
-                this website.
+                <i className="fa fa-thumbs-up"></i> Thumbs up. You can trust this website.
               </p>
               <p className="important">
-                Pandering conspiracy theories and claims bleaching your lungs
-                kills Coronavirus?
+                Pandering conspiracy theories and claims bleaching your lungs kills Coronavirus?
                 <br />
-                <i className="fa fa-thumbs-down"></i> Thumbs down. Stay away
-                from this site.
+                <i className="fa fa-thumbs-down"></i> Thumbs down. Stay away from this site.
               </p>
               <p>
                 <strong>Simple!</strong>
               </p>
             </div>
-            <img
-              src="/icons-images/Screenshot.jpg"
-              alt="Screenshot of a news website"
-            ></img>
+            <img src="/icons-images/Screenshot.jpg" alt="Screenshot of a news website"></img>
           </div>
         </div>
 
         <div className="more-info third-section">
           <h2>There is a lot of information out there</h2>
           <p>
-            And more keeps coming out every day. It’s hard to know what you can
-            trust, and bad information can be very dangerous. Factually is a
-            platform that lets you check the credibility of a website.
+            And more keeps coming out every day. It’s hard to know what you can trust, and bad
+            information can be very dangerous. Factually is a platform that lets you check the
+            credibility of a website.
           </p>
           <p>
-            We do this by going through the content of the website and looking
-            at its sources of information. This makes it easier to spot real
-            facts about COVID-19, helping you take care of yourself and others.
+            We do this by going through the content of the website and looking at its sources of
+            information. This makes it easier to spot real facts about COVID-19, helping you take
+            care of yourself and others.
           </p>
         </div>
       </div>
