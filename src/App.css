@@ -37,6 +37,11 @@ h4 {
   color: var(--main-fg-color);
 }
 
+.logo {
+  height: 3rem;
+  padding: 0.5rem;
+}
+
 h1 {
   font-size: 8rem;
 }
@@ -72,6 +77,12 @@ header {
   font-size: 2.8rem;
   line-height: 1;
   margin-bottom: 3rem;
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .search {
@@ -233,6 +244,12 @@ a:hover,
 a:active {
   color: var(--accet-color-blue);
   text-decoration: underline;
+}
+
+.results {
+  display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 @media only screen and (max-width: 300px) {
