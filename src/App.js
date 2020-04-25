@@ -34,18 +34,33 @@ function App() {
               <p className="important">
                 Solid information and credible sources?
                 <br />
-                <i className="fa fa-thumbs-up"></i> Thumbs up. You can trust this website.
+                <br />
+                <img className="icon" src="/icons-images/thumbsup.svg" alt="thumpsdown icon" />{' '}
+                <span style={{ lineHeight: '4rem' }}>Thumbs up. You can trust this website.</span>
               </p>
               <p className="important">
                 Pandering conspiracy theories and claims bleaching your lungs kills Coronavirus?
                 <br />
-                <i className="fa fa-thumbs-down"></i> Thumbs down. Stay away from this site.
+                <br />
+                <img
+                  className="icon"
+                  src="/icons-images/thumbsdown.svg"
+                  alt="thumpsdown icon"
+                />{' '}
+                <span style={{ lineHeight: '4rem' }}>Thumbs down. Stay away from this site.</span>
               </p>
               <p>
                 <strong>Simple!</strong>
               </p>
             </div>
-            <img src="/icons-images/Screenshot.jpg" alt="Screenshot of a news website"></img>
+            <div style={{ position: 'relative' }}>
+              <img
+                className="screenshot"
+                src="/icons-images/Screenshot.jpg"
+                alt="Screenshot of a news website"
+              />
+              <img id="over_image" src="/icons-images/thumbsup.svg" alt="thumpsdown icon" />
+            </div>
           </div>
         </div>
 
