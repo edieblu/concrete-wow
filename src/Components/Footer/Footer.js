@@ -12,6 +12,13 @@ function Footer() {
         <a href="https://github.com/edieblu/concrete-wow" target="_blank" rel="noopener noreferrer">
           <i style={{ fontSize: '20px', marginLeft: '3rem' }} className="fa fa-github"></i>
         </a>{' '}
+        <a
+          href="https://www.youtube.com/watch?v=SkqQ7ovtEDg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i style={{ fontSize: '20px', marginLeft: '3rem' }} className="fa fa-youtube"></i>
+        </a>{' '}
       </p>
     </div>
   );
