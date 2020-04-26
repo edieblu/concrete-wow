@@ -25,6 +25,7 @@ export default function Search() {
       } catch (error) {
         setIsError(true);
         setData(null);
+        setSearchTerm("");
       }
       setIsLoading(false);
     } else setIsValidUrl(false);
@@ -38,8 +39,6 @@ export default function Search() {
         setIsValidUrl(true);
       } else if (event.key === "Enter") {
         event.preventDefault();
-        setIsValidUrl(true);
-
         _sendSerchRequest();
       }
     },

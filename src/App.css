@@ -90,7 +90,7 @@ header {
 }
 
 .search-term {
-  width: 300px;
+  width: 400px;
   height: 100%;
   border: 3px solid var(--accet-color-blue);
   border-right: none;
@@ -211,13 +211,6 @@ header {
 .more-info > .icons {
   height: 5px;
 }
-
-/* #over_image {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  z-index: 2;
-} */
 
 .third-section {
   flex-direction: column;
