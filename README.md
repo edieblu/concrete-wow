@@ -22,4 +22,4 @@ If you would like to contribute to the project:
 
 ## Deployment
 
-The `master` branch gets built automatically deployed to [Netlify](https://competent-blackwell-613cf6.netlify.app/).
+The `master` branch gets built automatically deployed to [Netlify](https://competent-blackwell-613cf6.netlify.app/) and [Factually.dev](https://factually.dev/)
