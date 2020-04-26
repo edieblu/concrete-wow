@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import Form from '../Components/Form'
 
-export default function Answer({ website, isTrusted, score }) {
+export default function Answer({ website, isTrusted }) {
 const [displayForm, setDisplayForm] = useState(false)
 
 const _toggleForm = useCallback(() => {
