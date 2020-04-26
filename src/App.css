@@ -17,7 +17,6 @@
 
 html {
   font-size: 62.5%;
-  overscroll-behavior-y: none;
 }
 
 h1,
@@ -244,6 +243,40 @@ a:active {
   display: flex;
   flex-direction: column;
   align-items: start;
+  margin-top: 3rem;
+}
+
+.results p {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.good {
+  display: flex;
+  align-items: baseline;
+}
+
+
+.blue-button {
+  background-color: var(--accet-color-blue);
+  color: var(--main-fg-color);
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 2px;
+
+}
+
+.disagree {
+  margin-left: 1rem;
+}
+
+.form {
+  display: flex;
+    flex-direction: column;
+    width: 400px;
+    border: 3px solid white;
+    margin: 3rem auto;
 }
 
 @media only screen and (min-width: 300px) {
