@@ -215,7 +215,6 @@ header {
 .third-section {
   flex-direction: column;
   justify-content: center;
-  /* height: 20rem; */
   max-width: 1000px;
 }
 
@@ -323,13 +322,15 @@ a:active {
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   h3 {
     font-size: 2rem;
   }
-
+  .third-section p {
+    font-size: 1.8rem;
+  }
   .more-info {
     margin: 0 auto;
     display: grid;
