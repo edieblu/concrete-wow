@@ -19,7 +19,7 @@ export default function Search() {
 
   let url = `${BASE_URL}url=${searchTerm}`;
   const _sendSerchRequest = useCallback(async () => {
-    const { protocol, host } = parse(searchTerm);
+    const { protocol } = parse(searchTerm);
     if(searchTerm.indexOf('.') !== -1) {
       if (protocol === 'http:' || searchTerm.indexOf('http') === -1) url = `${BASE_URL}url=https://${searchTerm}`
       setIsLoading(true);
