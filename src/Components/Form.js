@@ -1,38 +1,74 @@
 import React, { useState, useCallback } from "react";
+import axios from "axios";
 
-export default function Form({ url='', report = "falseBad" }) {
+
+export default function Form({ url, isTrusted }) {
   const [comment, setComment] = useState();
+  const [isLoading, setIsLoading] = useState(false)
+  const [isError, setIsError] = useState(null)
+  const BASE_URL = "https://api.factually.dev/report";
 
+  const _updateComment = useCallback(
+    (event) => setComment(event.target.value),
+    []
+  );
 
-  const _updateComment = () => {
+  const _sendReport = useCallback(async () => {
+      setIsLoading(true);
+      try {
+        await axios.post(BASE_URL, {
+          "url": url,
+          "disposition": "falseGood",
+          "comments": comment
+        })
+        .then(function (response) {
+          if (response.status == 200) {
+            setIsLoading(false)
+            setIsError(false)
+          } else {
+            setIsError(true)
+            setIsLoading(false)
+          }
+        })
+        ;
+      } catch (error) {
+        setIsError(true);
+      }
 
-  }
+      setIsLoading(false);
+  },[comment, url]);
 
-  const _sendReport = () => {
-    console.log('report sent')
-  }
+  const _onClick = useCallback((event) => {
+    event.preventDefault()
+    _sendReport()
+  },[_sendReport])
 
   return (
     <form className="form" onSubmit={_sendReport} >
       <label>
         <input
           type="button"
-          className=""
-          value={report === "falseBad" ? "👍" : "👎"}
+          className="thumb"
+          value={isTrusted === "bad" ? "👍" : "👎"}
         />
-        This website {report === 'falseBad' ? 'can' : "can't"} be trusted
+        This website {isTrusted === 'bad' ? 'can' : "can't"} be trusted
       </label>
       <label>
         <textarea
-          className="search-term"
           value={comment}
           onChange={_updateComment}
-          // onKeyDown={_checkKeyActions}
-          placeholder=""
+          placeholder="Please explain why we should change our rating 😃"
           autoFocus
+          required
         />
       </label>
-      <button className='blue-button submit'>Submit</button>
+      <button className='blue-button submit' disabled={comment ? false : true } onClick={_onClick}>Submit</button>
+      {isError ? (
+          <p className='status'>Hmm 🤔. Something went wrong, please try again.</p>
+        ) : null}
+        {isError === false && !isLoading ? (
+          <p className='status'>Success! 🎉 Your report was sent!</p>
+        ) : null}
     </form>
   );
 }

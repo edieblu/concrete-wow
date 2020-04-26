@@ -12,7 +12,7 @@ const _toggleForm = useCallback(() => {
     <div className="results">
       <p>{`🔍 You've just searched for: ${website}`}</p>
       {isTrusted === "good" ? (
-        <div className='good'>
+        <div className='result'>
           <p> 👍 Good news! We think this website is a trusted source!</p>
           <button className='blue-button disagree' onClick={_toggleForm}>Disagree?</button>
 
@@ -20,9 +20,13 @@ const _toggleForm = useCallback(() => {
       ) : isTrusted === "unknown" ? (
         <p> 🤷‍♀️ Hmm. We don't have enough information about this webste.</p>
       ) : (
-        <p> 👎 Stay away! This website is a known source of fake news!</p>
+        <div className='result'>
+          <p> 👎 Stay away! This website is a known source of fake news!</p>
+          <button className='blue-button disagree' onClick={_toggleForm}>Disagree?</button>
+        </div>
+
       )}
-      {displayForm ? <Form /> : null}
+      {displayForm ? <Form url={website} isTrusted={isTrusted}/> : null}
     </div>
   );
 }

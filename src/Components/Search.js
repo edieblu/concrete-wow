@@ -12,7 +12,6 @@ export default function Search() {
   const [isValidUrl, setIsValidUrl] = useState(true);
 
   const reset = () => {
-    setSearchTerm("")
     setIsValidUrl(true)
     setIsLoading(false)
   }
@@ -48,7 +47,7 @@ export default function Search() {
         _sendSerchRequest();
       }
     },
-    [searchTerm]
+    [_sendSerchRequest]
   );
 
   const _updateSearchTerm = useCallback(
