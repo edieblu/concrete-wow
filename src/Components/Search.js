@@ -4,11 +4,12 @@ import axios from "axios";
 
 export default function Search() {
   const BASE_URL = "https://api.factually.dev/reputation?";
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("https://");
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
   const [isError, setIsError] = useState(false);
   const [isValidUrl, setIsValidUrl] = useState(true);
+  console.log('isValidUrl: ', isValidUrl);
 
   const validUrlRegex = new RegExp("(^http[s]?:/{2})|(^www)|(^/{1,2})");
 
@@ -21,11 +22,11 @@ export default function Search() {
       try {
         const result = await axios(url);
         setData(result.data);
-        setSearchTerm("");
+        setSearchTerm("https://");
       } catch (error) {
         setIsError(true);
         setData(null);
-        setSearchTerm("");
+        setSearchTerm("https://");
       }
       setIsLoading(false);
     } else setIsValidUrl(false);
@@ -35,7 +36,7 @@ export default function Search() {
     (event) => {
       if (event.key === "Escape") {
         event.preventDefault();
-        setSearchTerm("");
+        setSearchTerm("https://");
         setIsValidUrl(true);
       } else if (event.key === "Enter") {
         event.preventDefault();
