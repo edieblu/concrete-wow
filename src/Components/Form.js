@@ -15,10 +15,11 @@ export default function Form({ url, isTrusted }) {
 
   const _sendReport = useCallback(async () => {
       setIsLoading(true);
+      const disposition = isTrusted === 'good'? 'falseGood' : 'falseBad'
       try {
         await axios.post(BASE_URL, {
           "url": url,
-          "disposition": "falseGood",
+          "disposition": disposition,
           "comments": comment
         })
         .then(function (response) {
