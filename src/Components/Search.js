@@ -1,41 +1,40 @@
 import React, { useState, useCallback } from "react";
 import Answer from "./Answer";
 import axios from "axios";
+import parse from "url-parse";
 
 export default function Search() {
   const BASE_URL = "https://api.factually.dev/reputation?";
-  const [searchTerm, setSearchTerm] = useState("https://");
+  const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
   const [isError, setIsError] = useState(false);
   const [isValidUrl, setIsValidUrl] = useState(true);
 
-  const validUrlRegex = new RegExp("(^http[s]?:/{2})|(^www)|(^/{1,2})");
-
+  let url = `${BASE_URL}url=${searchTerm}`;
   const _sendSerchRequest = useCallback(async () => {
-    const url = `${BASE_URL}url=${searchTerm}`;
-    if (validUrlRegex.test(searchTerm)) {
+    const { protocol } = parse(searchTerm);
+      if (protocol === 'http:') url = `${BASE_URL}url=https://${searchTerm}`
       setIsLoading(true);
       setData(null);
       setIsError(false);
       try {
         const result = await axios(url);
         setData(result.data);
-        setSearchTerm("https://");
+        setSearchTerm("");
       } catch (error) {
         setIsError(true);
         setData(null);
-        setSearchTerm("https://");
+        setSearchTerm("");
       }
       setIsLoading(false);
-    } else setIsValidUrl(false);
   }, [searchTerm, isLoading, isError, data, isValidUrl]);
 
   const _checkKeyActions = useCallback(
     (event) => {
       if (event.key === "Escape") {
         event.preventDefault();
-        setSearchTerm("https://");
+        setSearchTerm("");
         setIsValidUrl(true);
       } else if (event.key === "Enter") {
         event.preventDefault();
