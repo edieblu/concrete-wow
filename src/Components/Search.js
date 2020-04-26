@@ -11,22 +11,30 @@ export default function Search() {
   const [isError, setIsError] = useState(false);
   const [isValidUrl, setIsValidUrl] = useState(true);
 
+  const reset = () => {
+    setSearchTerm("")
+    setIsValidUrl(true)
+    setIsLoading(false)
+  }
+
   let url = `${BASE_URL}url=${searchTerm}`;
   const _sendSerchRequest = useCallback(async () => {
     const { protocol } = parse(searchTerm);
+    if(searchTerm.indexOf('.') !== -1) {
       if (protocol === 'http:') url = `${BASE_URL}url=https://${searchTerm}`
       setIsLoading(true);
-      setData(null);
-      setIsError(false);
       try {
         const result = await axios(url);
         setData(result.data);
-        setSearchTerm("");
+        reset()
       } catch (error) {
         setIsError(true);
-        setData(null);
-        setSearchTerm("");
+        reset()
       }
+    } else {
+      setIsValidUrl(false)
+    }
+
       setIsLoading(false);
   }, [searchTerm, isLoading, isError, data, isValidUrl]);
 
@@ -85,7 +93,7 @@ export default function Search() {
             Make sure it start with 'www' or 'https'. Please try again.
           </p>
         ) : null}
-        {data !== null ? (
+        {data !== null && !isError && isValidUrl ? (
           <Answer
             website={data.basisURL}
             isTrusted={data.safe}
