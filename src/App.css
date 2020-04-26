@@ -301,6 +301,12 @@ a:active {
   h3 {
     font-size: 1.7rem;
   }
+  .more-info {
+    padding: 15rem;
+  }
+  p {
+    font-size: 2rem;
+  }
   .more-info p {
     font-size: 1.5rem;
   }
@@ -329,8 +335,8 @@ a:active {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(8, 2rem);
-    padding: 25rem;
-    height: 60vh;
+    padding: 15rem;
+    height: 43vh;
   }
 
   .more-info i {
@@ -363,7 +369,7 @@ a:active {
     height: 7rem;
     z-index: 2;
     top: 10rem;
-    left: 15rem;
+    left: 16rem;
   }
   .icon {
     height: 4rem;
@@ -377,5 +383,15 @@ a:active {
 @media only screen and (min-width: 1000px) {
   .span-container {
     line-height: 4rem;
+  }
+  .more-info {
+    padding: 20rem;
+  }
+  .screenshot {
+    width: 50rem;
+  }
+  #over_image {
+    top: 12rem;
+    left: 20rem;
   }
 }
