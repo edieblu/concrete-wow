@@ -90,7 +90,7 @@ export default function Search() {
         {!isValidUrl ? (
           <p>
             Hmm 🤔. That doesn't look like a valid website URL. <br />
-            Make sure it start with 'www' or 'https'. Please try again.
+            Make sure it starts with 'www' or 'https'. Please try again.
           </p>
         ) : null}
         {data !== null && !isError && isValidUrl ? (
