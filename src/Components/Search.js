@@ -23,7 +23,7 @@ export default function Search() {
     console.log('host: ', host);
     console.log('protocol: ', protocol);
     if(searchTerm.indexOf('.') !== -1) {
-      if (protocol === 'http:' || protocol == null || host == null) url = `${BASE_URL}url=https://${searchTerm}`
+      if (protocol === 'http:' || searchTerm.indexOf('http') === -1) url = `${BASE_URL}url=https://${searchTerm}`
       console.log('url: ', url);
       setIsLoading(true);
       try {
