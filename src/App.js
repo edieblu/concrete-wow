@@ -1,9 +1,8 @@
-
-import React from "react";
-import Search from "./Components/Search"
-import Logo from "./Components/Logo/Logo";
-import Footer from "./Components/Footer/Footer";
-import "./App.css";
+import React from 'react';
+import Search from './Components/Search';
+import Logo from './Components/Logo/Logo';
+import Footer from './Components/Footer/Footer';
+import './App.css';
 
 function App() {
   return (
@@ -20,7 +19,15 @@ function App() {
         </header>
         <div className="white-bg">
           <div className="more-info">
-            <div>
+            <div className="screenshot-wrapper">
+              <img
+                className="screenshot"
+                src="/icons-images/Screenshot.jpg"
+                alt="Screenshot of a news website"
+              />
+              <img id="over_image" src="/icons-images/thumbsup.svg" alt="thumpsdown icon" />
+            </div>
+            <div className="para-wrapper">
               <h2>No fuss and no frills</h2>
               <p>We simply tell you if you can trust COVID-19 information on a website or not.</p>
               <p className="important">
@@ -28,7 +35,7 @@ function App() {
                 <br />
                 <br />
                 <img className="icon" src="/icons-images/thumbsup.svg" alt="thumpsdown icon" />{' '}
-                <span style={{ lineHeight: '4rem' }}>Thumbs up. You can trust this website.</span>
+                <span className="span-container">Thumbs up. You can trust this website.</span>
               </p>
               <p className="important">
                 Pandering conspiracy theories and claims bleaching your lungs kills Coronavirus?
@@ -39,19 +46,11 @@ function App() {
                   src="/icons-images/thumbsdown.svg"
                   alt="thumpsdown icon"
                 />{' '}
-                <span style={{ lineHeight: '4rem' }}>Thumbs down. Stay away from this site.</span>
+                <span className="span-container">Thumbs down. Stay away from this site.</span>
               </p>
               <p>
                 <strong>Simple!</strong>
               </p>
-            </div>
-            <div className="screenshot-wrapper">
-              <img
-                className="screenshot"
-                src="/icons-images/Screenshot.jpg"
-                alt="Screenshot of a news website"
-              />
-              <img id="over_image" src="/icons-images/thumbsup.svg" alt="thumpsdown icon" />
             </div>
           </div>
         </div>

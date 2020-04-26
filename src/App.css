@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open + Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 :root {
   --main-bg-color: #1a1e24;
@@ -24,7 +24,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: 1.1;
@@ -167,9 +167,9 @@ header {
 
 .more-info {
   margin: 0 auto;
-  display: flex;
-  padding: 15rem;
-  max-width: 1000px;
+  /* display: flex; */
+  padding: 5rem;
+  max-width: 100%;
 }
 
 .more-info i {
@@ -186,27 +186,27 @@ header {
 }
 
 .screenshot {
-  width: 500px;
+  width: 80%;
   position: relative;
   filter: opacity(0.5);
   border-radius: 3px;
-  float: right;
+  /* float: right; */
 }
 #over_image {
   position: absolute;
-  height: 7rem;
+  height: 20%;
   z-index: 2;
-  top: 40%;
-  left: 40%;
+  top: 30%;
+  left: 35%;
 }
 .icon {
-  height: 4rem;
+  height: 2rem;
   float: left;
 }
 .more-info p {
   line-height: 1.25;
   margin-bottom: 2rem;
-  float: left;
+  /* float: left; */
 }
 .more-info > .icons {
   height: 5px;
@@ -243,11 +243,11 @@ a:active {
 
 .results {
   display: flex;
-    flex-direction: column;
-    align-items: start;
+  flex-direction: column;
+  align-items: start;
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (min-width: 300px) {
   h1 {
     font-size: 5rem;
   }
@@ -259,29 +259,123 @@ a:active {
   h3 {
     font-size: 1.6rem;
   }
+  p {
+    font-size: 1rem;
+  }
+  .footer-container {
+    height: 5rem;
+    padding: 0 4rem 0 4rem;
+  }
   .more-info {
     padding: 5rem;
   }
   .more-info p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+  .search-term {
+    width: 230px;
+  }
+  .span-container {
+    line-height: 2rem;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 400px) {
+  .search-term {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .search-term {
+    width: 350px;
+  }
+}
+@media only screen and (min-width: 600px) {
   h1 {
     font-size: 6.5rem;
   }
 
   h2 {
-    font-size: rem;
+    font-size: 2rem;
   }
 
   h3 {
     font-size: 1.7rem;
   }
-  .more-info {
-    padding: 9rem;
-  }
   .more-info p {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+  .search-term {
+    width: 400px;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 800px) {
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .more-info {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 2rem);
+    padding: 10rem;
+    height: 60vh;
+  }
+
+  .more-info i {
+    font-size: 3rem;
+  }
+
+  .more-info .important {
+    letter-spacing: 0.3px;
+  }
+
+  .screenshot-wrapper {
+    position: relative;
+    height: 100%;
+    grid-column: 6/ 9;
+    grid-row: 2/4;
+  }
+  .para-wrapper {
+    grid-column: 1/ 5;
+    grid-row: 1/8;
+  }
+  .screenshot {
+    width: 40rem;
+    position: relative;
+    filter: opacity(0.5);
+    border-radius: 3px;
+    /* float: right; */
+  }
+  #over_image {
+    position: absolute;
+    height: 7rem;
+    z-index: 2;
+    top: 10rem;
+    left: 15rem;
+  }
+  .icon {
+    height: 4rem;
+    float: left;
+  }
+  .third-section {
+    display: block;
+    height: 20vh;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .span-container {
+    line-height: 4rem;
   }
 }
