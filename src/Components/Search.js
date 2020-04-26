@@ -9,7 +9,6 @@ export default function Search() {
   const [data, setData] = useState(null);
   const [isError, setIsError] = useState(false);
   const [isValidUrl, setIsValidUrl] = useState(true);
-  console.log('isValidUrl: ', isValidUrl);
 
   const validUrlRegex = new RegExp("(^http[s]?:/{2})|(^www)|(^/{1,2})");
 

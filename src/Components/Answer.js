@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function Answer({ website, isTrusted, score}) {
-  console.log(isTrusted)
   return (
     <div className='results'>
       <p>{`🔍 You've just searched for: ${website}`}</p>
